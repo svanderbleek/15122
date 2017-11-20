@@ -1,0 +1,15 @@
+#use <util>
+
+int quot(int x, int y)
+//@requires y != 0;
+{
+  return x / y;
+}
+
+int rem(int x, int y)
+//@requires y != 0;
+//@ensures \result >= 0;
+//@ensures \result <= abs(y);
+{
+  return abs(x % y);
+}
